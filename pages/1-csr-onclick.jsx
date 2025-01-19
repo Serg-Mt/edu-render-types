@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ShowData, wrapper } from '../components/payload';
+import { ShowData, wrapper } from '../components/core';
 
 export default function Page() {
   const

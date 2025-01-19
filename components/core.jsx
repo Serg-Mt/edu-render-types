@@ -1,3 +1,5 @@
+import next from 'next';
+
 const
   url = new URL(`https://jsonplaceholder.typicode.com/users`);
 
@@ -16,28 +18,25 @@ function Data({ data }) {
 }
 
 export function ShowData({ data, error }) {
-  const isGydrating = undefined;
-  console.log('render ShowData', isGydrating);
+  const isHydrating = undefined;
+  console.debug('render ShowData', isHydrating);
   if (error) return <div className='error'>error:{String(error)}</div>
   if (data) return <Data data={data} />
   return <div className='spinner'>loading...</div>
 }
 
 export async function fetcher() {
-  const path = url.search
-  try {
-    const
-      response = await fetch(url);
-    if (!response.ok) throw new Error('response' + response.status);
-    const
-      random = Math.random(),
-      json = await response.json(),
-      date = (new Date).toLocaleTimeString();
-    console.debug('fetcher', date);
-    return { json, date, random };
-  } catch (error) {
-    throw error;
-  }
+  url.search = Math.random(); // для отключения кеширования
+  const
+    response = await fetch(url);
+  if (!response.ok)
+    throw new Error('response' + response.status);
+  const
+    random = Math.random(),
+    json = await response.json(),
+    date = (new Date).toLocaleTimeString();
+  console.debug('fetcher', date);
+  return { json, date, random };
 }
 
 export async function wrapper(setData, setError) {
