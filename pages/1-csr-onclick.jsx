@@ -7,7 +7,7 @@ export default function Page() {
     [error, setError] = useState(null),
     onClick = () => wrapper(setData, setError);
   return <>
-    <button onClick={onClick}>get data</button>;
+    <button onClick={onClick}>get data</button>
     <ShowData data={data} error={error} />
   </>
 }
