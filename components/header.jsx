@@ -1,13 +1,16 @@
+'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 
 const
   pages = [
     { href: '/', title: 'home' },
+    { href: '/app2', title: 'app2' },
     { href: '/1-csr-onclick', title: 'CSR onclick' },
     { href: '/2-csr-onmount', title: 'CSR onMount' },
     { href: '/3-ssr', title: 'SSR' },
-    { href: '/4-ssg', title: 'SSG' }
+    { href: '/4-ssg', title: 'SSG' },
+    { href: '/dyn/', title: 'dynamic' }
   ];
 
 export default function Header() {
