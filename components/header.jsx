@@ -6,11 +6,12 @@ const
   pages = [
     { href: '/', title: 'home' },
     { href: '/app2', title: 'app2' },
+    { href: '/todo', title: 'todo' },
     { href: '/1-csr-onclick', title: 'CSR onclick' },
     { href: '/2-csr-onmount', title: 'CSR onMount' },
     { href: '/3-ssr', title: 'SSR' },
     { href: '/4-ssg', title: 'SSG' },
-    { href: '/dyn/', title: 'dynamic' }
+    { href: '/dyn/', title: 'dynamic (page)' }
   ];
 
 export default function Header() {

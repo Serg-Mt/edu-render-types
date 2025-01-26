@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serv": "pnpm dlx json-server@0.17.4  -p 3333 -w  db.json",
    "dev": "next dev",
     "build": "next build",
     "start": "next start",
