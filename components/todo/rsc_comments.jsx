@@ -35,7 +35,7 @@ export async function RSC_Comments() {
   const
     response = await fetch('http://localhost:3333/comments'),
     comments = await response.json();
-  if (Math.random() < .3) throw new Error('++++');
+  // if (Math.random() < .3) throw new Error('++++');
   return <fieldset>
     <legend>RSC_Comments <ClientServerIndicator /></legend>
     <AddForm />
